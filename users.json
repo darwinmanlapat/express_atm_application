@@ -1,0 +1,12 @@
+{
+    "users" : [
+        {
+            "uuid": "1234",
+            "firstName" : "Darwin",
+            "lastName" : "Manlapat",
+            "username" : "darwinmanlapat",
+            "password" : "password123",
+            "balance": 20000
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', { title: 'Login'}) %> 
+<body>
+    <div class="container">
+       <div class="row vh-100">
+            <div class="col">
+                <div class="h-100 d-flex flex-column justify-content-center">
+                    <h1 class="display-2 text-center">Bayan Academy ATM</h1>
+                    <% if(locals.error) { %>
+                        <div class="alert alert-danger text-center" role="alert">
+                            <%= error %>
+                        </div>
+                    <% } %>
+                    <form action="/" method="POST">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                    </form>
+                    <p class="text-center">Don't have an account yet? <a href="/registration">Register</a></p>
+                </div>
+            </div>
+
+            <div class="col d-flex flex-column justify-content-center">
+                <img src="/img/atm_machine.svg" alt="atm_machine">
+            </div>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', { title: 'Dashboard'}) %> 
+<body>
+    <section id="main-nav">
+        <%- include('partials/header', {user}) %> 
+    </section>
+    <div class="container vh-100 d-flex flex-column justify-content-center">
+        <div class="d-flex justify-content-between align-items-center border border-dark rounded p-5 bg-dark text-white">
+            <div class="">
+                <h2>Your current balance is:</h2>
+                <h4><%= user.balance %></p>
+            </div>
+            <div class="d-flex flex-column">
+                <a href="/deposit/<%= user.uuid %>" class="btn btn-primary btn-lg mb-3  link-light text-decoration-none">Deposit</a>
+                <a href="/withdrawal/<%= user.uuid %>" class="btn btn-secondary btn-lg link-light text-decoration-none">Withdraw</a>
+            </div>
+        </div>
+       
+    </div>
+   
+</body>
+</html>
